@@ -1,5 +1,5 @@
 ## README
-This tool is primaryly used for parsing VIRL topology file to build its topology using qemu + linux bridge
+This tool is primary used for parsing VIRL topology file to build its topology using qemu + linux bridge
 
 ## How TO USE
 
