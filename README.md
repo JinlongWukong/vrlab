@@ -1,7 +1,7 @@
 ## README
 This tool is primary used for parsing VIRL topology file to build its topology using qemu + linux bridge
 
-## How TO USE
+### How TO USE
 
 usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu}
 
@@ -34,3 +34,7 @@ Example3: remove topology
  	sudo ./loadVIRL.py -f topology.virl -m mgmt remove
   
 
+### Notes
+####1. Please make sure run this script as root user or sudo 
+####2. Please make sure qemu, brctl, kvm are installed and enabled on your linux server
+####3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
