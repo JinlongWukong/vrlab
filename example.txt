@@ -1,0 +1,158 @@
+cisco@BhartiLab:~/script$ sudo ./loadVIRL.py -f topology.virl -m virbr0  build
+...Will start building nodes:
+
+-> starting node: iosxrv-1 
+brctl addif virbr0 iosxrv-1-mgmt1 
+ip link set iosxrv-1-mgmt1 up 
+
+-> starting node: iosxrv-2 
+brctl addif virbr0 iosxrv-2-mgmt1 
+ip link set iosxrv-2-mgmt1 up 
+
+-> starting node: iosxrv-3 
+brctl addif virbr0 iosxrv-3-mgmt1 
+ip link set iosxrv-3-mgmt1 up 
+
+-> starting node: iosxrv-4 
+brctl addif virbr0 iosxrv-4-mgmt1 
+ip link set iosxrv-4-mgmt1 up 
+
+-> starting node: iosxrv-5 
+brctl addif virbr0 iosxrv-5-mgmt1 
+ip link set iosxrv-5-mgmt1 up 
+
+-> starting node: iosxrv-6 
+brctl addif virbr0 iosxrv-6-mgmt1 
+ip link set iosxrv-6-mgmt1 up 
+
+...All Nodes build finished 
+
+...Will start building Links:
+
+-> starting add link: xrv-1-0xrv-2-0
+brctl addbr xrv-1-0xrv-2-0 
+brctl addif xrv-1-0xrv-2-0 iosxrv-1-0 
+brctl addif xrv-1-0xrv-2-0 iosxrv-2-0 
+ip link set xrv-1-0xrv-2-0 up 
+ip link set iosxrv-1-0 up 
+ip link set iosxrv-2-0 up 
+
+-> starting add link: xrv-1-1xrv-3-0
+brctl addbr xrv-1-1xrv-3-0 
+brctl addif xrv-1-1xrv-3-0 iosxrv-1-1 
+brctl addif xrv-1-1xrv-3-0 iosxrv-3-0 
+ip link set xrv-1-1xrv-3-0 up 
+ip link set iosxrv-1-1 up 
+ip link set iosxrv-3-0 up 
+
+-> starting add link: xrv-2-1xrv-4-0
+brctl addbr xrv-2-1xrv-4-0 
+brctl addif xrv-2-1xrv-4-0 iosxrv-2-1 
+brctl addif xrv-2-1xrv-4-0 iosxrv-4-0 
+ip link set xrv-2-1xrv-4-0 up 
+ip link set iosxrv-2-1 up 
+ip link set iosxrv-4-0 up 
+
+-> starting add link: xrv-3-1xrv-4-1
+brctl addbr xrv-3-1xrv-4-1 
+brctl addif xrv-3-1xrv-4-1 iosxrv-3-1 
+brctl addif xrv-3-1xrv-4-1 iosxrv-4-1 
+ip link set xrv-3-1xrv-4-1 up 
+ip link set iosxrv-3-1 up 
+ip link set iosxrv-4-1 up 
+
+-> starting add link: xrv-3-2xrv-5-0
+brctl addbr xrv-3-2xrv-5-0 
+brctl addif xrv-3-2xrv-5-0 iosxrv-3-2 
+brctl addif xrv-3-2xrv-5-0 iosxrv-5-0 
+ip link set xrv-3-2xrv-5-0 up 
+ip link set iosxrv-3-2 up 
+ip link set iosxrv-5-0 up 
+
+-> starting add link: xrv-4-2xrv-6-0
+brctl addbr xrv-4-2xrv-6-0 
+brctl addif xrv-4-2xrv-6-0 iosxrv-4-2 
+brctl addif xrv-4-2xrv-6-0 iosxrv-6-0 
+ip link set xrv-4-2xrv-6-0 up 
+ip link set iosxrv-4-2 up 
+ip link set iosxrv-6-0 up 
+
+-> starting add link: xrv-5-1xrv-6-1
+brctl addbr xrv-5-1xrv-6-1 
+brctl addif xrv-5-1xrv-6-1 iosxrv-5-1 
+brctl addif xrv-5-1xrv-6-1 iosxrv-6-1 
+ip link set xrv-5-1xrv-6-1 up 
+ip link set iosxrv-5-1 up 
+ip link set iosxrv-6-1 up 
+
+...All Links build finished 
+
+
+
+cisco@BhartiLab:~/script$ sudo ./loadVIRL.py -f topology.virl -m virbr0 show
+
+...Print all Nodes 
+
+Below devices are running...
+
+Pid      Name            serial-port              vnc-port
+---------------------------------------------------------------------
+30536    iosxrv-1        telnet:0.0.0.0:6001       -              
+30674    iosxrv-2        telnet:0.0.0.0:6011       -              
+30814    iosxrv-3        telnet:0.0.0.0:6021       -              
+31017    iosxrv-4        telnet:0.0.0.0:6031       -              
+31179    iosxrv-5        telnet:0.0.0.0:6041       -              
+31324    iosxrv-6        telnet:0.0.0.0:6051       -              
+---------------------------------------------------------------------
+
+
+...Print all links 
+
+iosxrv-1-GigabitEthernet0/0/0/0 <------------> iosxrv-2-GigabitEthernet0/0/0/0
+iosxrv-1-GigabitEthernet0/0/0/1 <------------> iosxrv-3-GigabitEthernet0/0/0/0
+iosxrv-2-GigabitEthernet0/0/0/1 <------------> iosxrv-4-GigabitEthernet0/0/0/0
+iosxrv-3-GigabitEthernet0/0/0/1 <------------> iosxrv-4-GigabitEthernet0/0/0/1
+iosxrv-3-GigabitEthernet0/0/0/2 <------------> iosxrv-5-GigabitEthernet0/0/0/0
+iosxrv-4-GigabitEthernet0/0/0/2 <------------> iosxrv-6-GigabitEthernet0/0/0/0
+iosxrv-5-GigabitEthernet0/0/0/1 <------------> iosxrv-6-GigabitEthernet0/0/0/1
+
+...All done!
+
+
+
+
+cisco@BhartiLab:~/script$ sudo ./loadVIRL.py -f topology.virl -m virbr0 remove
+
+...Remove all Nodes 
+
+Will kill pid:30536
+
+Will kill pid:30674
+
+Will kill pid:30814
+
+Will kill pid:31017
+
+Will kill pid:31179
+
+Will kill pid:31324
+
+
+...Remove all bridges 
+
+ip link set xrv-1-0xrv-2-0 down 
+brctl delbr xrv-1-0xrv-2-0 
+ip link set xrv-1-1xrv-3-0 down 
+brctl delbr xrv-1-1xrv-3-0 
+ip link set xrv-2-1xrv-4-0 down 
+brctl delbr xrv-2-1xrv-4-0 
+ip link set xrv-3-1xrv-4-1 down 
+brctl delbr xrv-3-1xrv-4-1 
+ip link set xrv-3-2xrv-5-0 down 
+brctl delbr xrv-3-2xrv-5-0 
+ip link set xrv-4-2xrv-6-0 down 
+brctl delbr xrv-4-2xrv-6-0 
+ip link set xrv-5-1xrv-6-1 down 
+brctl delbr xrv-5-1xrv-6-1 
+
+...All done!
