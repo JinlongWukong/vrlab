@@ -44,3 +44,5 @@ Example3: remove topology
 	3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
 
 	4. The pre-configuration not support currenlly, must config manually after login
+	
+	5. Only one topology is active, please remove old before build the new topology,  if the topology file and its image disk are there, then you can restore them back any time by just build the topolgy again
