@@ -35,10 +35,10 @@ Example3: remove topology
   
 
 ### Notes
-####1. Please make sure run this script as root user or sudo
+	1. Please make sure run this script as root user or sudo
 
+	2. Please make sure qemu, brctl, kvm are installed and enabled on your linux server
 
-####2. Please make sure qemu, brctl, kvm are installed and enabled on your linux server
+	3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
 
-
-####3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
+	4. The pre-configuration not support currenlly, must config manually after login
