@@ -20,6 +20,9 @@ positional arguments:
 	remove -> remove topolgy
 	qemu -> check qemu startup parameter
 
+Please find the attached example.txt for details examples
+
+
 Example1: build topology
 
 
