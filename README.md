@@ -12,18 +12,32 @@ usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu}
 
 
 positional arguments: 
+
+
 	show -> show topology
+	
+	
 	build -> build topology
+	
+	
 	remove -> remove topolgy
+	
+	
 	qemu -> check qemu startup parameter
 
 Example1: build topology
+
+
  sudo ./loadVIRL.py -f topology.virl -m mgmt build
 
 Example2: show topology
+
+
  sudo ./loadVIRL.py -f topology.virl -m mgmt show
 
 Example3: remove topology
+
+
  sudo ./loadVIRL.py -f topology.virl -m mgmt remove
   
 
