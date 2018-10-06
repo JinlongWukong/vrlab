@@ -1,7 +1,7 @@
-# README
-This tool is primary used for parsing VIRL topology file to build its topology using qemu + linux bridge
+## README
+This tool is primaryly used for parsing VIRL topology file to build its topology using qemu + linux bridge
 
-# How TO USE
+## How TO USE
 
 usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu}
 
