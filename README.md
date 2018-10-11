@@ -1,7 +1,7 @@
 ## README
 This tool is primary used for parsing VIRL topology file to build its topology using qemu + linux bridge
 
-currentlly support devices: xrv9k, csr1000v, asav, n9k
+currentlly support devices: xrv9k, csr1000v, asav, n9k, linux
 
 ### How TO USE
 
@@ -20,20 +20,19 @@ positional arguments:
 	remove -> remove topolgy
 	qemu -> check qemu startup parameter
 
-Please find the attached example.txt for details examples
+Please find the attached file "example.txt" for details examples
 
-
-Example1: build topology
+Action 1: build topology
 
 
  	sudo ./loadVIRL.py -f topology.virl -m mgmt build
 
-Example2: show topology
+Action 2: show topology
 
 
  	sudo ./loadVIRL.py -f topology.virl -m mgmt show
 
-Example3: remove topology
+Action 3: remove topology
 
 
  	sudo ./loadVIRL.py -f topology.virl -m mgmt remove
@@ -48,4 +47,4 @@ Example3: remove topology
 
 	4. The pre-configuration not support currenlly, must config manually after login
 	
-	5. Only one topology is active, please remove old before build the new topology,  if the topology file and its image disk are there, then you can restore them back any time by just build the topolgy again
+	5. Please make sure remove the current acive topology before build the another one, this tool will not delete image, so these removed topology can be restore any time you want 
