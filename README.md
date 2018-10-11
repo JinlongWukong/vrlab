@@ -40,11 +40,13 @@ Action 3: remove topology
 
 ### Notes
 	1. Please make sure run this script as root user or sudo
-
-	2. Please make sure qemu, brctl, kvm are installed on your linux server
-
-	3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
-
-	4. The pre-configuration not support currentlly, have to config manually after login
 	
-	5. Please make sure remove the current acive topology before build the another one, this tool will not delete image, so these removed topology can be restore any time you want 
+	2. This program only verified on python2.7 and don't need any additional module installed 
+
+	3. Please make sure qemu, brctl, kvm are installed on your linux server
+
+	4. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
+
+	5. The pre-configuration not support currentlly, have to config manually after login
+	
+	6. Please make sure remove the current acive topology before build the another one, this tool will not delete image, so these removed topology can be restore any time you want 
