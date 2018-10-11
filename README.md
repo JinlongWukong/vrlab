@@ -7,7 +7,7 @@ currentlly support devices: xrv9k, csr1000v, asav, n9k, linux
 
 usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu}
 
--f FILE, must specify the topology file exported from VIRL
+-f FILE, must specify the topology file exported from VIRL client GUI Maestro
 
 
 -m MANAGEMENT, specify the management bridge to connect all nodes mgmt interfaces
