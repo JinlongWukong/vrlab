@@ -10,7 +10,7 @@ usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu}
 -f FILE, must specify the topology file exported from VIRL client GUI Maestro
 
 
--m MANAGEMENT, specify the management bridge to connect all nodes mgmt interfaces
+-m MANAGEMENT, specify the management bridge to connect all nodes through mgmt interfaces
 
 
 positional arguments: 
@@ -20,7 +20,7 @@ positional arguments:
 	remove -> remove topolgy
 	qemu -> check qemu startup parameter
 
-Please find the attached file "example.txt" for details examples
+Please find the attached file "example.txt" for more detailed examples
 
 Action 1: build topology
 
@@ -41,10 +41,10 @@ Action 3: remove topology
 ### Notes
 	1. Please make sure run this script as root user or sudo
 
-	2. Please make sure qemu, brctl, kvm are installed and enabled on your linux server
+	2. Please make sure qemu, brctl, kvm are installed on your linux server
 
 	3. Please input the absolute directory of image on target linux server when draw the topology on VIRL VM Maestro
 
-	4. The pre-configuration not support currenlly, must config manually after login
+	4. The pre-configuration not support currentlly, have to config manually after login
 	
 	5. Please make sure remove the current acive topology before build the another one, this tool will not delete image, so these removed topology can be restore any time you want 
