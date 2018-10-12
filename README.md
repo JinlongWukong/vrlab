@@ -1,7 +1,7 @@
 ## README
 This tool is primary used for parsing VIRL topology file to build its topology using qemu + linux bridge
 
-currentlly support devices: xrv9k, csr1000v, asav, n9k, linux
+currently supported devices: xrv9k, csr1000v, asav, n9k, linux
 
 ### How TO USE
 
