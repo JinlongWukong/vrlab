@@ -19,4 +19,4 @@ class linux(vr.vm):
         self.qemu_args.extend(["-boot", "once=c"])
         self.qemu_args.extend(["-vnc", "0.0.0.0:2%d" % num])
         self.qemu_args.extend(["-netdev", "tap,ifname=%s,id=host1,script=no,downscript=no" % (self.name + "-mgmt1")])
-        self.qemu_args.extend(["-device", "virtio-net-pci,romfile=,netdev=host1,id=host1,mac=%s" % self.fetch_mac(self.name + "-mgmt1")])
+        self.qemu_args.extend(["-device", "virtio-net-pci,romfile=,netdev=host1,id=host1"])
