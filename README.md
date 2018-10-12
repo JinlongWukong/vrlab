@@ -28,7 +28,7 @@ Please find the attached file "example.txt" for more detailed examples
 
 Action 1: build topology
 
-        chmod +x loadVIRL.py
+     chmod +x loadVIRL.py
  	sudo ./loadVIRL.py -f topology.virl -m mgmt build
 
 Action 2: show topology
