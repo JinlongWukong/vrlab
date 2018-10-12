@@ -22,6 +22,10 @@ positional arguments:
 
 Please find the attached file "example.txt" for more detailed examples
 
+
+![alt text](https://github.com/JinlongWukong/vrlab/blob/master/topology.PNG)
+
+
 Action 1: build topology
 
 
