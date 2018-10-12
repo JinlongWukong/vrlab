@@ -54,3 +54,5 @@ Action 3: remove topology
 	5. The pre-configuration not support currentlly, have to config manually after login
 	
 	6. Please make sure remove the current acive topology before build the another one, this tool will not delete image, so these removed topology can be restore any time you want 
+        
+	7. when draw topology on VRIL, only device name and VM image are needed for input
