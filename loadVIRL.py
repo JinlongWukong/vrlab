@@ -3,6 +3,7 @@
 import xml.etree.ElementTree as ET
 import time
 import subprocess
+import os
 import argparse
 
 from vrlab import vriosxrv
@@ -39,6 +40,16 @@ class Link:
 
     def __str__(self):
         return (self.src['desc'] + ' <------------> ' + self.dst['desc'])
+
+def capture():
+    cmd = "tcpdump -i "
+    for link in Links:
+        if link.src['desc'] in args.option:
+            os.system(cmd + link.src['name'])
+            return
+        elif link.dst['desc'] in args.option:
+            os.system(cmd + link.dst['name'])
+            return
 
 def loadVirlTopology(file):
     with open(file) as f:
@@ -142,8 +153,10 @@ parser.add_argument("-f", "--file",
 parser.add_argument("-m", "--management",
                     help="specify a management bridge to connect nodes mgmt interface")
 parser.add_argument('action',
-                    choices=['show', 'build', 'remove', 'qemu'],
-                    help="specify action: build, show, remove, qemu")
+                    choices=['show', 'build', 'remove', 'qemu', 'capture'],
+                    help="specify action: build, show, remove, qemu, capture")
+parser.add_argument('option', nargs='?',default='',
+                    help="option parameters")
 
 args = parser.parse_args()
 Nodes = []
@@ -158,6 +171,7 @@ switch = {
     'build' : build_topology,
     'show' : show_topology,
     'remove' : remove_topology,
-    'qemu' : qemu_parameter
+    'qemu' : qemu_parameter,
+    'capture' : capture
 }
 switch[args.action]()
