@@ -5,7 +5,7 @@ currently supported devices: xrv9k, csr1000v, asav, n9k, linux
 
 ### How TO USE
 
-usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu} [option]
+usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu,capture} [option]
 
 -f FILE, must specify the topology file exported from VIRL client GUI Maestro
 
@@ -15,7 +15,7 @@ usage: loadVIRL.py [-h] -f FILE [-m MANAGEMENT] {show,build,remove,qemu} [option
 
 positional arguments: 
 
-        {show,build,remove,qemu,capture}
+    {show,build,remove,qemu,capture}
 	show -> show topology	
 	build -> build topology
 	remove -> remove topolgy
