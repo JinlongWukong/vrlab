@@ -45,10 +45,18 @@ def capture():
     cmd = "tcpdump -i "
     for link in Links:
         if link.src['desc'] in args.option:
-            os.system(cmd + link.src['name'])
+            if "tcpdump" in args.option:  #tcpdump already given in the options
+                cmd = args.option.replace(link.src['desc'], link.src['name'])
+            else:
+                cmd = cmd + args.option.replace(link.src['desc'], link.src['name'])
+            os.system(cmd)
             return
         elif link.dst['desc'] in args.option:
-            os.system(cmd + link.dst['name'])
+            if "tcpdump" in args.option:  #tcpdump already given in the options
+                cmd = args.option.replace(link.dst['desc'], link.dst['name'])
+            else:
+                cmd = cmd + args.option.replace(link.dst['desc'], link.dst['name'])
+            os.system(cmd)
             return
 
 def loadVirlTopology(file):
