@@ -45,6 +45,11 @@ Action 3: remove topology
     chmod +x loadVIRL.py
  	sudo ./loadVIRL.py -f topology.virl -m mgmt remove
   
+Action 4: tcpdump interface
+
+	sudo ./loadVIRL.py -f topology.virl capture <interface name output from show>
+	or
+	sudo ./loadVIRL.py -f topology.virl capture "tcpdump -i <interface name output from show>  -p icmp"
 
 ### Notes
 	1. Please make sure run this script as root user or sudo
